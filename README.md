@@ -4,7 +4,7 @@ Proyecto de portfolio de una aplicación de reserva de clases de gimnasio con ar
 ## Arquitectura
 El sistema está compuesto por varios microservicios, cada uno con una responsabilidad única. La comunicación se gestiona a través de un API Gateway y un Service Discovery para un sistema desacoplado y escalable.
 
-![Diagrama de Arquitectura](docs/Diagrama_aqrquitectura.drawio.png)
+![Diagrama de Arquitectura](Diagrama_aqrquitectura.drawio.png)
 
 ### Microservicios
 * **class-catalog-service (Puerto 8082):** Gestiona los tipos de clases y sus descripciones.
