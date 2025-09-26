@@ -1,0 +1,174 @@
+# --- openapi.yml para class-catalog-service ---
+
+# Versión de la especificación OpenAPI que estamos usando.
+openapi: 3.0.1
+
+# Información general sobre nuestra API.
+info:
+  title: "Class Catalog Service API"
+  description: "API para gestionar el catálogo de clases de fitness y sus instructores."
+  version: "1.0.0"
+
+# Servidores donde nuestra API estará disponible. Útil para definir entornos (desarrollo, producción).
+servers:
+  - url: http://localhost:8082
+    description: Servidor de Desarrollo
+
+# La sección más importante: aquí definimos todos nuestros endpoints.
+paths:
+  # --- Endpoints para /classes ---
+  /classes:
+    # --- GET /classes ---
+    get:
+      tags:
+        - "Class Catalog" # Agrupa los endpoints en la UI de Swagger
+      summary: "Obtiene una lista de todas las clases de fitness."
+      operationId: "getAllClasses"
+      responses:
+        '200': # Respuesta exitosa
+          description: "Lista de clases obtenida con éxito."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FitnessClass' # Referencia al esquema definido abajo
+    # --- POST /classes ---
+    post:
+      tags:
+        - "Class Catalog"
+      summary: "Crea una nueva clase de fitness."
+      operationId: "createClass"
+      requestBody:
+        description: "El objeto de la clase a crear."
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FitnessClassInput' # Usamos un esquema de entrada sin 'id'
+      responses:
+        '201': # Creado con éxito
+          description: "Clase creada con éxito."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FitnessClass'
+        '400': # Error de validación
+          description: "Datos de entrada inválidos."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  # --- Endpoints para /classes/{id} ---
+  /classes/{id}:
+    # --- GET /classes/{id} ---
+    get:
+      tags:
+        - "Class Catalog"
+      summary: "Busca una clase de fitness por su ID."
+      operationId: "getClassById"
+      parameters:
+        - name: id
+          in: path
+          description: "ID numérico de la clase a buscar."
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: "Clase encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FitnessClass'
+        '404':
+          description: "Clase no encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    # --- DELETE /classes/{id} ---
+    delete:
+      tags:
+        - "Class Catalog"
+      summary: "Elimina una clase de fitness por su ID."
+      operationId: "deleteClassById"
+      parameters:
+        - name: id
+          in: path
+          description: "ID numérico de la clase a eliminar."
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204': # No Content
+          description: "Clase eliminada con éxito."
+        '404':
+          description: "Clase no encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+# Aquí definimos componentes reutilizables, como nuestros modelos de datos (esquemas).
+components:
+  schemas:
+    # --- Esquema para un objeto FitnessClass completo (con id) ---
+    FitnessClass:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: "ID único de la clase."
+          readOnly: true # El cliente no puede enviar el id, solo leerlo
+        name:
+          type: string
+          description: "Nombre de la clase."
+          example: "Yoga Vinyasa"
+        description:
+          type: string
+          description: "Descripción detallada de la clase."
+          example: "Una clase dinámica para conectar movimiento y respiración."
+
+    # --- Esquema para crear una nueva FitnessClass (sin id) ---
+    FitnessClassInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: "Nombre de la clase."
+          example: "Spinning de Alta Intensidad"
+        description:
+          type: string
+          description: "Descripción detallada de la clase."
+          example: "45 minutos de cardio para quemar calorías."
+
+    # --- Esquema para nuestras respuestas de error estandarizadas ---
+    ErrorResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          description: "Un URI que identifica el tipo de problema."
+          example: "https://developer.gymbooking.com/errors/not-found"
+        title:
+          type: string
+          description: "Un resumen corto del tipo de problema."
+          example: "Recurso no encontrado"
+        code:
+          type: string
+          description: "Código de error interno de la aplicación."
+          example: "1001"
+        detail:
+          type: string
+          description: "Una explicación específica del error."
+          example: "La clase con id 999 no existe."
+        instance:
+          type: string
+          description: "La ruta del endpoint que ha fallado."
+          example: "/classes/999"
