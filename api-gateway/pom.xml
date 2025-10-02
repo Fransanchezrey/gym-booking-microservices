@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- api-gateway/pom.xml -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -17,24 +17,10 @@
 	<description>API Gateway for the gym booking system</description>
 
 	<dependencies>
-		<!-- Spring Cloud Gateway -->
+		<!-- Solo el starter, sin versión -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<exclusions>
-				<!-- Evita que se meta otra versión distinta de gateway-server -->
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-gateway-server</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<!-- Forzamos la versión correcta de gateway-server -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-gateway-server</artifactId>
-			<version>4.1.6</version>
 		</dependency>
 
 		<!-- Eureka Client -->
