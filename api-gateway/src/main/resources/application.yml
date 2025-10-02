@@ -1,0 +1,30 @@
+# Puerto de entrada principal para todo nuestro sistema
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      # Habilita la integración con Eureka
+      discovery:
+        locator:
+          enabled: true
+      # Definimos nuestras rutas personalizadas y limpias
+      routes:
+        # Ruta para el servicio de catálogo de clases
+        - id: class-catalog-service-route
+          # uri: lb:// -> Significa que buscará el servicio en Eureka (Load Balanced)
+          uri: lb://class-catalog-service
+          predicates:
+            # Si una petición llega a /api/v1/classes/**, se redirigirá
+            - Path=/api/v1/classes/**
+          filters:
+            - StripPrefix=2
+
+# Configuración para que el Gateway se registre en Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

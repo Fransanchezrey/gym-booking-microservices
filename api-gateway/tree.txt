@@ -1,0 +1,313 @@
+[[1;34mINFO[m] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/3.3.4/spring-boot-starter-parent-3.3.4.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB Progress (1): 13 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/3.3.4/spring-boot-starter-parent-3.3.4.pom (13 kB at 41 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.3.4/spring-boot-dependencies-3.3.4.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 20 kBProgress (1): 25 kBProgress (1): 29 kBProgress (1): 33 kBProgress (1): 37 kBProgress (1): 41 kBProgress (1): 45 kBProgress (1): 49 kBProgress (1): 53 kBProgress (1): 57 kBProgress (1): 61 kBProgress (1): 66 kBProgress (1): 70 kBProgress (1): 74 kBProgress (1): 78 kBProgress (1): 82 kBProgress (1): 86 kBProgress (1): 90 kBProgress (1): 94 kBProgress (1): 98 kBProgress (1): 100 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.3.4/spring-boot-dependencies-3.3.4.pom (100 kB at 1.1 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2023.0.5/spring-cloud-dependencies-2023.0.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 10 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2023.0.5/spring-cloud-dependencies-2023.0.5.pom (10 kB at 109 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/4.1.5/spring-cloud-dependencies-parent-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 7.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/4.1.5/spring-cloud-dependencies-parent-4.1.5.pom (7.6 kB at 97 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-dependencies/4.1.5/spring-cloud-commons-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 7.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-dependencies/4.1.5/spring-cloud-commons-dependencies-4.1.5.pom (7.2 kB at 70 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/4.1.4/spring-cloud-dependencies-parent-4.1.4.pom
+Progress (1): 4.1 kBProgress (1): 7.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/4.1.4/spring-cloud-dependencies-parent-4.1.4.pom (7.6 kB at 81 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-dependencies/4.1.5/spring-cloud-netflix-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 9.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-dependencies/4.1.5/spring-cloud-netflix-dependencies-4.1.5.pom (9.8 kB at 93 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/4.1.5/spring-cloud-stream-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 8.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/4.1.5/spring-cloud-stream-dependencies-4.1.5.pom (8.6 kB at 83 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-task-dependencies/3.1.3/spring-cloud-task-dependencies-3.1.3.pom
+Progress (1): 4.1 kBProgress (1): 5.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-task-dependencies/3.1.3/spring-cloud-task-dependencies-3.1.3.pom (5.8 kB at 51 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-circuitbreaker-dependencies/3.1.4/spring-cloud-circuitbreaker-dependencies-3.1.4.pom
+Progress (1): 4.1 kBProgress (1): 6.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-circuitbreaker-dependencies/3.1.4/spring-cloud-circuitbreaker-dependencies-3.1.4.pom (6.7 kB at 79 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-config-dependencies/4.1.5/spring-cloud-config-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 7.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-config-dependencies/4.1.5/spring-cloud-config-dependencies-4.1.5.pom (7.7 kB at 89 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-dependencies/4.1.5/spring-cloud-function-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 6.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-dependencies/4.1.5/spring-cloud-function-dependencies-4.1.5.pom (6.8 kB at 72 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-dependencies/4.1.6/spring-cloud-gateway-dependencies-4.1.6.pom
+Progress (1): 4.1 kBProgress (1): 6.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-dependencies/4.1.6/spring-cloud-gateway-dependencies-4.1.6.pom (6.4 kB at 63 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-consul-dependencies/4.1.3/spring-cloud-consul-dependencies-4.1.3.pom
+Progress (1): 4.1 kBProgress (1): 7.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-consul-dependencies/4.1.3/spring-cloud-consul-dependencies-4.1.3.pom (7.5 kB at 93 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-vault-dependencies/4.1.4/spring-cloud-vault-dependencies-4.1.4.pom
+Progress (1): 4.1 kBProgress (1): 6.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-vault-dependencies/4.1.4/spring-cloud-vault-dependencies-4.1.4.pom (6.2 kB at 66 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-zookeeper-dependencies/4.1.3/spring-cloud-zookeeper-dependencies-4.1.3.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 8.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-zookeeper-dependencies/4.1.3/spring-cloud-zookeeper-dependencies-4.1.3.pom (8.9 kB at 95 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus-dependencies/4.1.3/spring-cloud-bus-dependencies-4.1.3.pom
+Progress (1): 4.1 kBProgress (1): 6.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus-dependencies/4.1.3/spring-cloud-bus-dependencies-4.1.3.pom (6.1 kB at 71 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-contract-dependencies/4.1.5/spring-cloud-contract-dependencies-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 8.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-contract-dependencies/4.1.5/spring-cloud-contract-dependencies-4.1.5.pom (8.7 kB at 107 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-openfeign-dependencies/4.1.4/spring-cloud-openfeign-dependencies-4.1.4.pom
+Progress (1): 4.1 kBProgress (1): 5.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-openfeign-dependencies/4.1.4/spring-cloud-openfeign-dependencies-4.1.4.pom (5.9 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-kubernetes-dependencies/3.1.5/spring-cloud-kubernetes-dependencies-3.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-kubernetes-dependencies/3.1.5/spring-cloud-kubernetes-dependencies-3.1.5.pom (12 kB at 137 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.pom
+Progress (1): 3.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.pom (3.9 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.2/spring-batch-bom-5.1.2.pom
+Progress (1): 3.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.2/spring-batch-bom-5.1.2.pom (3.2 kB at 41 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2024.0.4/spring-data-bom-2024.0.4.pom
+Progress (1): 4.1 kBProgress (1): 5.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2024.0.4/spring-data-bom-2024.0.4.pom (5.5 kB at 66 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.13/spring-framework-bom-6.1.13.pom
+Progress (1): 4.1 kBProgress (1): 5.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.13/spring-framework-bom-6.1.13.pom (5.8 kB at 77 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.4/spring-integration-bom-6.3.4.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 10 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.4/spring-integration-bom-6.3.4.pom (10 kB at 132 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.4/spring-pulsar-bom-1.1.4.pom
+Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.4/spring-pulsar-bom-1.1.4.pom (2.9 kB at 38 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom (2.6 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.3/spring-security-bom-6.3.3.pom
+Progress (1): 4.1 kBProgress (1): 5.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.3/spring-security-bom-6.3.3.pom (5.3 kB at 59 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.2/spring-session-bom-3.3.2.pom
+Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.2/spring-session-bom-3.3.2.pom (2.9 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.11/spring-ws-bom-4.0.11.pom
+Progress (1): 3.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.11/spring-ws-bom-4.0.11.pom (3.5 kB at 44 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.gymbooking:api-gateway[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding api-gateway 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway/4.1.6/spring-cloud-starter-gateway-4.1.6.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-gateway/4.1.6/spring-cloud-starter-gateway-4.1.6.pom (2.6 kB at 32 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway/4.1.6/spring-cloud-gateway-4.1.6.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway/4.1.6/spring-cloud-gateway-4.1.6.pom (2.7 kB at 32 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.4/spring-cloud-build-4.1.4.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 20 kBProgress (1): 25 kBProgress (1): 29 kBProgress (1): 33 kBProgress (1): 37 kBProgress (1): 41 kBProgress (1): 45 kBProgress (1): 49 kBProgress (1): 50 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.4/spring-cloud-build-4.1.4.pom (50 kB at 641 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.4/spring-cloud-build-dependencies-4.1.4.pom
+Progress (1): 3.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.4/spring-cloud-build-dependencies-4.1.4.pom (3.0 kB at 34 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.12/spring-boot-dependencies-3.2.12.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 20 kBProgress (1): 25 kBProgress (1): 29 kBProgress (1): 33 kBProgress (1): 37 kBProgress (1): 41 kBProgress (1): 45 kBProgress (1): 49 kBProgress (1): 53 kBProgress (1): 57 kBProgress (1): 61 kBProgress (1): 66 kBProgress (1): 70 kBProgress (1): 74 kBProgress (1): 78 kBProgress (1): 82 kBProgress (1): 86 kBProgress (1): 90 kBProgress (1): 94 kBProgress (1): 98 kBProgress (1): 102 kBProgress (1): 106 kBProgress (1): 111 kBProgress (1): 115 kBProgress (1): 116 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.12/spring-boot-dependencies-3.2.12.pom (116 kB at 1.3 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.8/spring-amqp-bom-3.1.8.pom
+Progress (1): 3.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.8/spring-amqp-bom-3.1.8.pom (3.9 kB at 55 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.12/spring-data-bom-2023.1.12.pom
+Progress (1): 4.1 kBProgress (1): 5.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.12/spring-data-bom-2023.1.12.pom (5.5 kB at 76 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.15/spring-framework-bom-6.1.15.pom
+Progress (1): 4.1 kBProgress (1): 5.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.15/spring-framework-bom-6.1.15.pom (5.8 kB at 91 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.11/spring-integration-bom-6.2.11.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 11 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.11/spring-integration-bom-6.2.11.pom (11 kB at 113 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.0.12/spring-pulsar-bom-1.0.12.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.0.12/spring-pulsar-bom-1.0.12.pom (2.7 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.3/spring-restdocs-bom-3.0.3.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.3/spring-restdocs-bom-3.0.3.pom (2.6 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.8/spring-security-bom-6.2.8.pom
+Progress (1): 4.1 kBProgress (1): 5.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.8/spring-security-bom-6.2.8.pom (5.3 kB at 64 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.6/spring-session-bom-3.2.6.pom
+Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.6/spring-session-bom-3.2.6.pom (2.9 kB at 32 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter/4.1.5/spring-cloud-starter-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 5.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter/4.1.5/spring-cloud-starter-4.1.5.pom (5.0 kB at 53 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-parent/4.1.5/spring-cloud-commons-parent-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 4.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-parent/4.1.5/spring-cloud-commons-parent-4.1.5.pom (4.5 kB at 53 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.4/spring-boot-starter-3.3.4.pom
+Progress (1): 3.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.4/spring-boot-starter-3.3.4.pom (3.0 kB at 21 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.4/spring-boot-3.3.4.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.4/spring-boot-3.3.4.pom (2.2 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.13/spring-core-6.1.13.pom
+Progress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.13/spring-core-6.1.13.pom (2.0 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.13/spring-jcl-6.1.13.pom
+Progress (1): 1.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.13/spring-jcl-6.1.13.pom (1.8 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.13/spring-context-6.1.13.pom
+Progress (1): 2.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.13/spring-context-6.1.13.pom (2.8 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.13/spring-aop-6.1.13.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.13/spring-aop-6.1.13.pom (2.2 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.13/spring-beans-6.1.13.pom
+Progress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.13/spring-beans-6.1.13.pom (2.0 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.13/spring-expression-6.1.13.pom
+Progress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.13/spring-expression-6.1.13.pom (2.1 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.4/spring-boot-autoconfigure-3.3.4.pom
+Progress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.4/spring-boot-autoconfigure-3.3.4.pom (2.1 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.4/spring-boot-starter-logging-3.3.4.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.4/spring-boot-starter-logging-3.3.4.pom (2.5 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Progress (1): 4.1 kBProgress (1): 5.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom (5.7 kB at 69 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-context/4.1.5/spring-cloud-context-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 6.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-context/4.1.5/spring-cloud-context-4.1.5.pom (6.3 kB at 79 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.3.3/spring-security-crypto-6.3.3.pom
+Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.3.3/spring-security-crypto-6.3.3.pom (1.9 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons/4.1.5/spring-cloud-commons-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 7.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons/4.1.5/spring-cloud-commons-4.1.5.pom (7.4 kB at 59 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-rsa/1.1.3/spring-security-rsa-1.1.3.pom
+Progress (1): 4.1 kBProgress (1): 5.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-rsa/1.1.3/spring-security-rsa-1.1.3.pom (5.4 kB at 75 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server/4.1.6/spring-cloud-gateway-server-4.1.6.pom
+Progress (1): 4.1 kBProgress (1): 7.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-gateway-server/4.1.6/spring-cloud-gateway-server-4.1.6.pom (7.0 kB at 98 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.3.4/spring-boot-starter-validation-3.3.4.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.3.4/spring-boot-starter-validation-3.3.4.pom (2.5 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webflux/3.3.4/spring-boot-starter-webflux-3.3.4.pom
+Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-webflux/3.3.4/spring-boot-starter-webflux-3.3.4.pom (2.9 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.4/spring-boot-starter-json-3.3.4.pom
+Progress (1): 3.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.4/spring-boot-starter-json-3.3.4.pom (3.1 kB at 32 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.13/spring-web-6.1.13.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.13/spring-web-6.1.13.pom (2.4 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-reactor-netty/3.3.4/spring-boot-starter-reactor-netty-3.3.4.pom
+Progress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-reactor-netty/3.3.4/spring-boot-starter-reactor-netty-3.3.4.pom (2.1 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webflux/6.1.13/spring-webflux-6.1.13.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webflux/6.1.13/spring-webflux-6.1.13.pom (2.6 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.5/spring-cloud-starter-netflix-eureka-client-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 7.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.5/spring-cloud-starter-netflix-eureka-client-4.1.5.pom (7.2 kB at 61 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.5/spring-cloud-netflix-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 4.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.5/spring-cloud-netflix-4.1.5.pom (4.6 kB at 44 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.5/spring-cloud-build-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 20 kBProgress (1): 25 kBProgress (1): 29 kBProgress (1): 33 kBProgress (1): 37 kBProgress (1): 41 kBProgress (1): 45 kBProgress (1): 49 kBProgress (1): 50 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.5/spring-cloud-build-4.1.5.pom (50 kB at 515 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.5/spring-cloud-build-dependencies-4.1.5.pom
+Progress (1): 3.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.5/spring-cloud-build-dependencies-4.1.5.pom (3.0 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.1.5/spring-cloud-netflix-eureka-client-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 8.2 kBProgress (1): 8.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.1.5/spring-cloud-netflix-eureka-client-4.1.5.pom (8.6 kB at 102 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.1.5/spring-cloud-starter-loadbalancer-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 4.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.1.5/spring-cloud-starter-loadbalancer-4.1.5.pom (4.5 kB at 59 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-loadbalancer/4.1.5/spring-cloud-loadbalancer-4.1.5.pom
+Progress (1): 4.1 kBProgress (1): 6.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-loadbalancer/4.1.5/spring-cloud-loadbalancer-4.1.5.pom (6.9 kB at 80 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/3.3.4/spring-boot-starter-cache-3.3.4.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-cache/3.3.4/spring-boot-starter-cache-3.3.4.pom (2.3 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/6.1.13/spring-context-support-6.1.13.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/6.1.13/spring-context-support-6.1.13.pom (2.4 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.4/spring-boot-starter-test-3.3.4.pom
+Progress (1): 4.1 kBProgress (1): 5.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.4/spring-boot-starter-test-3.3.4.pom (5.1 kB at 68 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.4/spring-boot-test-3.3.4.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.4/spring-boot-test-3.3.4.pom (2.2 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.13/spring-test-6.1.13.pom
+Progress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.13/spring-test-6.1.13.pom (2.1 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.4/spring-boot-test-autoconfigure-3.3.4.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.4/spring-boot-test-autoconfigure-3.3.4.pom (2.5 kB at 30 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.6.1:tree[m [1m(default-cli)[m @ [36mapi-gateway[0;1m ---[m
+[[1;34mINFO[m] com.gymbooking:api-gateway:jar:1.0-SNAPSHOT
+[[1;34mINFO[m] +- org.springframework.cloud:spring-cloud-starter-gateway:jar:4.1.6:compile
+[[1;34mINFO[m] |  +- org.springframework.cloud:spring-cloud-starter:jar:4.1.5:compile
+[[1;34mINFO[m] |  |  +- org.springframework.cloud:spring-cloud-context:jar:4.1.5:compile
+[[1;34mINFO[m] |  |  |  \- org.springframework.security:spring-security-crypto:jar:6.3.3:compile
+[[1;34mINFO[m] |  |  +- org.springframework.cloud:spring-cloud-commons:jar:4.1.5:compile
+[[1;34mINFO[m] |  |  \- org.springframework.security:spring-security-rsa:jar:1.1.3:compile
+[[1;34mINFO[m] |  |     \- org.bouncycastle:bcprov-jdk18on:jar:1.78:compile
+[[1;34mINFO[m] |  +- org.springframework.cloud:spring-cloud-gateway-server:jar:4.1.6:compile
+[[1;34mINFO[m] |  |  +- org.springframework.boot:spring-boot-starter-validation:jar:3.3.4:compile
+[[1;34mINFO[m] |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.30:compile
+[[1;34mINFO[m] |  |  |  \- org.hibernate.validator:hibernate-validator:jar:8.0.1.Final:compile
+[[1;34mINFO[m] |  |  |     +- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[[1;34mINFO[m] |  |  |     +- org.jboss.logging:jboss-logging:jar:3.5.3.Final:compile
+[[1;34mINFO[m] |  |  |     \- com.fasterxml:classmate:jar:1.7.0:compile
+[[1;34mINFO[m] |  |  \- io.projectreactor.addons:reactor-extra:jar:3.5.2:compile
+[[1;34mINFO[m] |  |     \- io.projectreactor:reactor-core:jar:3.6.10:compile
+[[1;34mINFO[m] |  |        \- org.reactivestreams:reactive-streams:jar:1.0.4:compile
+[[1;34mINFO[m] |  \- org.springframework.boot:spring-boot-starter-webflux:jar:3.3.4:compile
+[[1;34mINFO[m] |     +- org.springframework.boot:spring-boot-starter-json:jar:3.3.4:compile
+[[1;34mINFO[m] |     |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
+[[1;34mINFO[m] |     |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.2:compile
+[[1;34mINFO[m] |     |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
+[[1;34mINFO[m] |     +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:3.3.4:compile
+[[1;34mINFO[m] |     |  \- io.projectreactor.netty:reactor-netty-http:jar:1.1.22:compile
+[[1;34mINFO[m] |     |     +- io.netty:netty-codec-http:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-common:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-buffer:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-transport:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-codec:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  \- io.netty:netty-handler:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     +- io.netty:netty-codec-http2:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     +- io.netty:netty-resolver-dns:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-resolver:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  \- io.netty:netty-codec-dns:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  \- io.netty:netty-resolver-dns-classes-macos:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     |  \- io.netty:netty-transport-classes-epoll:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |     \- io.projectreactor.netty:reactor-netty-core:jar:1.1.22:compile
+[[1;34mINFO[m] |     |        \- io.netty:netty-handler-proxy:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     |           \- io.netty:netty-codec-socks:jar:4.1.113.Final:compile
+[[1;34mINFO[m] |     +- org.springframework:spring-web:jar:6.1.13:compile
+[[1;34mINFO[m] |     |  +- org.springframework:spring-beans:jar:6.1.13:compile
+[[1;34mINFO[m] |     |  \- io.micrometer:micrometer-observation:jar:1.13.4:compile
+[[1;34mINFO[m] |     |     \- io.micrometer:micrometer-commons:jar:1.13.4:compile
+[[1;34mINFO[m] |     \- org.springframework:spring-webflux:jar:6.1.13:compile
+[[1;34mINFO[m] +- org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar:4.1.5:compile
+[[1;34mINFO[m] |  +- org.springframework.cloud:spring-cloud-netflix-eureka-client:jar:4.1.5:compile
+[[1;34mINFO[m] |  |  \- org.apache.httpcomponents.client5:httpclient5:jar:5.3.1:compile
+[[1;34mINFO[m] |  |     +- org.apache.httpcomponents.core5:httpcore5:jar:5.2.5:compile
+[[1;34mINFO[m] |  |     \- org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.5:compile
+[[1;34mINFO[m] |  +- com.netflix.eureka:eureka-client:jar:2.0.4:compile
+[[1;34mINFO[m] |  |  +- com.thoughtworks.xstream:xstream:jar:1.4.20:compile
+[[1;34mINFO[m] |  |  |  \- io.github.x-stream:mxparser:jar:1.2.2:compile
+[[1;34mINFO[m] |  |  |     \- xmlpull:xmlpull:jar:1.1.3.1:compile
+[[1;34mINFO[m] |  |  +- jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:compile
+[[1;34mINFO[m] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:compile
+[[1;34mINFO[m] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[[1;34mINFO[m] |  |  +- com.netflix.spectator:spectator-api:jar:1.7.3:compile
+[[1;34mINFO[m] |  |  +- org.slf4j:slf4j-api:jar:2.0.16:compile
+[[1;34mINFO[m] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.3:compile
+[[1;34mINFO[m] |  |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+[[1;34mINFO[m] |  |  |  \- commons-codec:commons-codec:jar:1.16.1:compile
+[[1;34mINFO[m] |  |  +- commons-configuration:commons-configuration:jar:1.10:compile
+[[1;34mINFO[m] |  |  |  \- commons-lang:commons-lang:jar:2.6:compile
+[[1;34mINFO[m] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+[[1;34mINFO[m] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
+[[1;34mINFO[m] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
+[[1;34mINFO[m] |  |  +- com.netflix.netflix-commons:netflix-eventbus:jar:0.3.0:runtime
+[[1;34mINFO[m] |  |  |  +- com.netflix.netflix-commons:netflix-infix:jar:0.3.0:runtime
+[[1;34mINFO[m] |  |  |  |  +- commons-jxpath:commons-jxpath:jar:1.3:runtime
+[[1;34mINFO[m] |  |  |  |  +- joda-time:joda-time:jar:2.3:runtime
+[[1;34mINFO[m] |  |  |  |  +- org.antlr:antlr-runtime:jar:3.4:runtime
+[[1;34mINFO[m] |  |  |  |  |  +- org.antlr:stringtemplate:jar:3.2.1:runtime
+[[1;34mINFO[m] |  |  |  |  |  \- antlr:antlr:jar:2.7.7:runtime
+[[1;34mINFO[m] |  |  |  |  \- com.google.code.gson:gson:jar:2.10.1:runtime
+[[1;34mINFO[m] |  |  |  +- com.netflix.servo:servo-core:jar:0.5.3:runtime
+[[1;34mINFO[m] |  |  |  \- org.apache.commons:commons-math:jar:2.2:runtime
+[[1;34mINFO[m] |  |  +- javax.annotation:javax.annotation-api:jar:1.2:runtime
+[[1;34mINFO[m] |  |  \- org.codehaus.jettison:jettison:jar:1.5.4:runtime
+[[1;34mINFO[m] |  +- com.netflix.eureka:eureka-core:jar:2.0.4:compile
+[[1;34mINFO[m] |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.4.0:compile
+[[1;34mINFO[m] |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
+[[1;34mINFO[m] |  |  \- com.google.guava:guava:jar:33.0.0-jre:runtime
+[[1;34mINFO[m] |  |     +- com.google.guava:failureaccess:jar:1.0.2:runtime
+[[1;34mINFO[m] |  |     +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:runtime
+[[1;34mINFO[m] |  |     +- org.checkerframework:checker-qual:jar:3.41.0:runtime
+[[1;34mINFO[m] |  |     +- com.google.errorprone:error_prone_annotations:jar:2.23.0:runtime
+[[1;34mINFO[m] |  |     \- com.google.j2objc:j2objc-annotations:jar:2.8:runtime
+[[1;34mINFO[m] |  \- org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:4.1.5:compile
+[[1;34mINFO[m] |     +- org.springframework.cloud:spring-cloud-loadbalancer:jar:4.1.5:compile
+[[1;34mINFO[m] |     +- org.springframework.boot:spring-boot-starter-cache:jar:3.3.4:compile
+[[1;34mINFO[m] |     |  \- org.springframework:spring-context-support:jar:6.1.13:compile
+[[1;34mINFO[m] |     \- com.stoyanr:evictor:jar:1.0.0:compile
+[[1;34mINFO[m] \- org.springframework.boot:spring-boot-starter-test:jar:3.3.4:test
+[[1;34mINFO[m]    +- org.springframework.boot:spring-boot-starter:jar:3.3.4:compile
+[[1;34mINFO[m]    |  +- org.springframework.boot:spring-boot:jar:3.3.4:compile
+[[1;34mINFO[m]    |  |  \- org.springframework:spring-context:jar:6.1.13:compile
+[[1;34mINFO[m]    |  |     +- org.springframework:spring-aop:jar:6.1.13:compile
+[[1;34mINFO[m]    |  |     \- org.springframework:spring-expression:jar:6.1.13:compile
+[[1;34mINFO[m]    |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.3.4:compile
+[[1;34mINFO[m]    |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.3.4:compile
+[[1;34mINFO[m]    |  |  +- ch.qos.logback:logback-classic:jar:1.5.8:compile
+[[1;34mINFO[m]    |  |  |  \- ch.qos.logback:logback-core:jar:1.5.8:compile
+[[1;34mINFO[m]    |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.23.1:compile
+[[1;34mINFO[m]    |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.23.1:compile
+[[1;34mINFO[m]    |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.16:compile
+[[1;34mINFO[m]    |  \- org.yaml:snakeyaml:jar:2.2:compile
+[[1;34mINFO[m]    +- org.springframework.boot:spring-boot-test:jar:3.3.4:test
+[[1;34mINFO[m]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.3.4:test
+[[1;34mINFO[m]    +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[[1;34mINFO[m]    +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.2:test
+[[1;34mINFO[m]    |  \- jakarta.activation:jakarta.activation-api:jar:2.1.3:test
+[[1;34mINFO[m]    +- net.minidev:json-smart:jar:2.5.1:test
+[[1;34mINFO[m]    |  \- net.minidev:accessors-smart:jar:2.5.1:test
+[[1;34mINFO[m]    |     \- org.ow2.asm:asm:jar:9.6:test
+[[1;34mINFO[m]    +- org.assertj:assertj-core:jar:3.25.3:test
+[[1;34mINFO[m]    |  \- net.bytebuddy:byte-buddy:jar:1.14.19:test
+[[1;34mINFO[m]    +- org.awaitility:awaitility:jar:4.2.2:test
+[[1;34mINFO[m]    +- org.hamcrest:hamcrest:jar:2.2:test
+[[1;34mINFO[m]    +- org.junit.jupiter:junit-jupiter:jar:5.10.3:test
+[[1;34mINFO[m]    |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.3:test
+[[1;34mINFO[m]    |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[[1;34mINFO[m]    |  |  +- org.junit.platform:junit-platform-commons:jar:1.10.3:test
+[[1;34mINFO[m]    |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[[1;34mINFO[m]    |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.3:test
+[[1;34mINFO[m]    |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.3:test
+[[1;34mINFO[m]    |     \- org.junit.platform:junit-platform-engine:jar:1.10.3:test
+[[1;34mINFO[m]    +- org.mockito:mockito-core:jar:5.11.0:test
+[[1;34mINFO[m]    |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.19:test
+[[1;34mINFO[m]    |  \- org.objenesis:objenesis:jar:3.3:test
+[[1;34mINFO[m]    +- org.mockito:mockito-junit-jupiter:jar:5.11.0:test
+[[1;34mINFO[m]    +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[[1;34mINFO[m]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[[1;34mINFO[m]    +- org.springframework:spring-core:jar:6.1.13:compile
+[[1;34mINFO[m]    |  \- org.springframework:spring-jcl:jar:6.1.13:compile
+[[1;34mINFO[m]    +- org.springframework:spring-test:jar:6.1.13:test
+[[1;34mINFO[m]    \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  8.589 s
+[[1;34mINFO[m] Finished at: 2025-10-02T12:56:01+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
