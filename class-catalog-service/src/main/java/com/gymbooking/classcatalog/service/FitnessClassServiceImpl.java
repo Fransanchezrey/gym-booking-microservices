@@ -1,6 +1,5 @@
 package com.gymbooking.classcatalog.service;
 
-
 import com.gymbooking.classcatalog.entities.FitnessClass;
 import com.gymbooking.classcatalog.exception.BusinessRuleException;
 import com.gymbooking.classcatalog.repository.FitnessClassRepository;

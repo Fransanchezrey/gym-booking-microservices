@@ -23,6 +23,25 @@ spring:
           filters:
             - StripPrefix=2
 
+        # Ruta para el servicio de socios
+        - id: member-service-route
+          uri: lb://member-service
+          predicates:
+            - Path=/api/v1/members/**
+          filters:
+            - StripPrefix=2
+
+
+        # Ruta para el servicio de horario de clases
+        - id: timetable-service-route
+          uri: lb://timetable-service
+          predicates:
+            - Path=/api/v1/timetable/**
+          filters:
+            - StripPrefix=2
+
+
+
 # Configuración para que el Gateway se registre en Eureka
 eureka:
   client:

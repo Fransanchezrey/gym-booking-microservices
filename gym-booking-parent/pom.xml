@@ -37,6 +37,8 @@
         <module>../class-catalog-service</module>
         <module>../discovery-service</module>
         <module>../api-gateway</module>
+        <module>../member-service</module>
+        <module>../timetable-service</module>
     </modules>
 
 </project>
