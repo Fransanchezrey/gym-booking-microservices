@@ -34,7 +34,7 @@ public class FitnessClassController {
     }
 
     @PostMapping
-    public ResponseEntity<FitnessClass> create(@RequestBody FitnessClass fitnessClass) {
+    public ResponseEntity<FitnessClass> create(@RequestBody FitnessClass fitnessClass) throws BusinessRuleException {
         FitnessClass savedClass = fitnessClassService.save(fitnessClass);
         return ResponseEntity.ok(savedClass);
     }

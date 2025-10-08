@@ -12,13 +12,13 @@ public class ClassCatalogClient {
 
     public String getClassNameById(Long classId) {
 
-        return webClientBuilder.build()
+        ClassResponse response = webClientBuilder.build()
                 .get()
                 .uri("http://localhost:8080/api/v1/classes/" + classId)
                 .retrieve()
                 .bodyToMono(ClassResponse.class)
-                .block()
-                .getName();
+                .block();
+        return response != null ? response.getName() : null;
     }
 
     // DTO interno para la respuesta

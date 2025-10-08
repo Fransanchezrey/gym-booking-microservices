@@ -28,8 +28,12 @@ public class FitnessClassServiceImpl implements FitnessClassService {
     }
 
     @Override
-    public FitnessClass save(FitnessClass fitnessClass) {
-        return fitnessClassRepository.save(fitnessClass);
+    public FitnessClass save(FitnessClass fitnessClass) throws BusinessRuleException {
+        if (fitnessClass.getName() == null || fitnessClass.getName().trim().isEmpty()) {
+            throw new BusinessRuleException("1002", "El nombre de la clase no puede estar vacío", HttpStatus.BAD_REQUEST);
+        }
+        else
+            return fitnessClassRepository.save(fitnessClass);
     }
 
     @Override

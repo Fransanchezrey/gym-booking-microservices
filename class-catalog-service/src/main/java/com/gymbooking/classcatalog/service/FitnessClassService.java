@@ -12,7 +12,7 @@ public interface FitnessClassService {
 
     FitnessClass getClassById(Long id) throws BusinessRuleException;
 
-    FitnessClass save(FitnessClass fitnessClass);
+    FitnessClass save(FitnessClass fitnessClass) throws BusinessRuleException;
 
     void deleteById(Long id) throws BusinessRuleException;
 }
