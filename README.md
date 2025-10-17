@@ -60,3 +60,5 @@ Para ejecutar este proyecto, necesitarás tener instalado Java 17 y Maven.
 
 ## Estado del Proyecto (08/10/2025)
 Todos los microservicios en funcionamiento
+Última tarea realizada: Tras crear el microservicio `booking-service`, hemos creado la conexión con el microservicio `member-service` para comprobar si la suscripción está activa, si lo está, continúa con la reserva y si no, lanza un error indicando el siguiente mensaje: "Member's membership is not active".
+Próxima tarea: Manejar los `spotsAvailable` en `timetable-service` para así tenerlos en cuenta a la hora de crear una reserva a través de `booking-service` y actualizar estos si la reserva ha sido creada.
