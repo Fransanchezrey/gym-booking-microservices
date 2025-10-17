@@ -1,0 +1,225 @@
+openapi: 3.0.1
+info:
+  title: "Booking Service API"
+  description: "API para gestionar reservas de clases en el gimnasio."
+  version: "1.0.0"
+
+servers:
+  - url: http://localhost:8084
+    description: Servidor de Desarrollo
+
+paths:
+  /bookings:
+    post:
+      tags:
+        - "Booking Management"
+      summary: "Realiza una nueva reserva para una clase."
+      description: "Crea una reserva si el usuario tiene una suscripción activa y la clase tiene espacio disponible."
+      operationId: "createBooking"
+      requestBody:
+        description: "Datos de la reserva a crear."
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingInput'
+      responses:
+        '201':
+          description: "Reserva creada con éxito."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '400':
+          description: "Datos inválidos o usuario sin suscripción activa."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "Clase o usuario no encontrados."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    get:
+      tags:
+        - "Booking Management"
+      summary: "Obtiene todas las reservas."
+      operationId: "getAllBookings"
+      responses:
+        '200':
+          description: "Lista de reservas."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+
+  /bookings/by-member:
+    get:
+      summary: "Obtiene reservas por memberId"
+      parameters:
+        - name: memberId
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Reservas encontradas"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+
+  /bookings/by-class:
+    get:
+      summary: "Obtiene reservas por scheduledClassId"
+      parameters:
+        - name: scheduledClassId
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Reservas encontradas"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+
+  /bookings/{id}:
+    get:
+      tags:
+        - "Booking Management"
+      summary: "Obtiene una reserva por su ID."
+      operationId: "getBookingById"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID de la reserva."
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Reserva encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '404':
+          description: "Reserva no encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    delete:
+      summary: "Elimina una reserva por su ID"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: "Reserva eliminada"
+        '404':
+          description: "Reserva no encontrada"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    patch:
+      tags:
+        - "Booking Management"
+      summary: "Actualiza el estado de una reserva (CONFIRMED, CANCELLED)."
+      operationId: "updateBookingStatus"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID de la reserva."
+          schema:
+            type: integer
+      requestBody:
+        description: "Nuevo estado de la reserva."
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingStatusUpdate'
+      responses:
+        '200':
+          description: "Estado actualizado."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '404':
+          description: "Reserva no encontrada."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    Booking:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          readOnly: true
+        memberId:
+          type: integer
+          format: int64
+          description: "ID del miembro (de member-service)."
+        scheduledClassId:
+          type: integer
+          format: int64
+          description: "ID de la clase agendada (de timetable-service)."
+        status:
+          type: string
+          enum: [CONFIRMED, CANCELLED]
+          description: "Estado de la reserva."
+
+    BookingInput:
+      type: object
+      required:
+        - memberId
+        - scheduledClassId
+      properties:
+        memberId:
+          type: integer
+        scheduledClassId:
+          type: integer
+
+    BookingStatusUpdate:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          enum: [CONFIRMED, CANCELLED]
+
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string

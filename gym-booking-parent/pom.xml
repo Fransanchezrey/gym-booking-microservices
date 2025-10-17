@@ -39,6 +39,7 @@
         <module>../api-gateway</module>
         <module>../member-service</module>
         <module>../timetable-service</module>
+        <module>../booking-service</module>
     </modules>
 
 </project>

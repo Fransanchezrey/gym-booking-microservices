@@ -40,6 +40,15 @@ spring:
           filters:
             - StripPrefix=2
 
+        # Ruta para el servicio de reservas
+        - id: booking-service-route
+          uri: lb://booking-service
+          predicates:
+            - Path=/api/v1/bookings/**
+          filters:
+            - StripPrefix=2
+
+
 
 
 # Configuración para que el Gateway se registre en Eureka
