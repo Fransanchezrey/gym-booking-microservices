@@ -8,11 +8,11 @@ El sistema está compuesto por varios microservicios, cada uno con una responsab
 
 ### Microservicios
 * **class-catalog-service (Puerto 8082):** Gestiona los tipos de clases y sus descripciones.
-* **member-service (Próximamente):** Gestiona el registro y los perfiles de los socios.
-* **timetable-service (Próximamente):** Gestionará el horario y el aforo de las clases.
+* **member-service (Puerto 8081):** Gestiona el registro y los perfiles de los socios.
+* **timetable-service (Puerto 8083):** Gestionará el horario y el aforo de las clases.
 * **booking-service (Próximamente):** Orquestará el proceso de reserva.
-* **api-gateway (Próximamente):** Punto de entrada único al sistema.
-* **discovery-service (Próximamente):** Registro y descubrimiento de servicios (Eureka).
+* **api-gateway (Puerto 8080):** Punto de entrada único al sistema.
+* **discovery-service (Puerto 8761):** Registro y descubrimiento de servicios (Eureka).
 
 ## Tecnologías Utilizadas
 * **Lenguaje:** Java 17
@@ -51,5 +51,5 @@ Para ejecutar este proyecto, necesitarás tener instalado Java 17 y Maven.
     * **Catálogo de Clases:** `http://localhost:8082/swagger-ui/index.html`
     * **Servicio de Miembros:** `http://localhost:8081/swagger-ui/index.html`
 
-## Estado del Proyecto (26/09/2025)
-Actualmente, el servicio `class-catalog-service` está funcional con operaciones CRUD básicas y manejo de errores centralizado. El resto de los componentes de la arquitectura están planificados y se implementarán a continuación.
+## Estado del Proyecto (08/10/2025)
+Actualmente, los servicios de negocio `class-catalog-service`, `member-service` y timetable-service` están funcional con operaciones CRUD básicas, manejo de errores centralizado y llamadas entre los microsrvicios `timetable-service` y `class-catalog-service'. También los microsericios de infraestructura `api-gateway` y `discovery-service`, están en funcionamiento. Siguiente tarea: `booking-service`, el cual es el verdadero eje de la aplicación.
