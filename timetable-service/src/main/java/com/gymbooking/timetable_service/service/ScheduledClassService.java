@@ -5,6 +5,7 @@ import com.gymbooking.timetable_service.exception.BusinessRuleException;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 public interface ScheduledClassService {
 
@@ -16,7 +17,9 @@ public interface ScheduledClassService {
 
     ScheduledClass save(ScheduledClass scheduledClass);
 
+    Optional<ScheduledClass> findById(Long id) throws BusinessRuleException;
+
     void deleteScheduledClassById(Long id) throws BusinessRuleException;
 
-
+    Optional<ScheduledClass> updateSpotsAvailable(Long id, Integer spotsAvailable) throws BusinessRuleException;
 }

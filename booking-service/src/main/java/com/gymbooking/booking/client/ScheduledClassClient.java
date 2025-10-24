@@ -1,6 +1,7 @@
 package com.gymbooking.booking.client;
 
 
+import com.gymbooking.booking.dto.ScheduledClassResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -22,10 +23,25 @@ public class ScheduledClassClient {
                 .block();
     }
 
-    // DTO interno para la respuesta
-    private static class ScheduledClassResponse {
-        private String name;
-        public String getName() { return name; }
-        public void setName(String name) { this.name = name; }
+
+    public ScheduledClassResponse getScheduledClassById(Long id) {
+        return webClientBuilder.build()
+                .get()
+                .uri("http://localhost:8080/api/v1/timetable/" + id)
+                .retrieve()
+                .bodyToMono(ScheduledClassResponse.class)
+                .block();
     }
+
+    // ScheduledClassClient.java
+
+    public ScheduledClassResponse updateSpotsAvailable(Long id, int spots) {
+        return webClientBuilder.build()
+                .patch()
+                .uri("http://localhost:8080/api/v1/timetable/{id}/spots?spots={spots}", id, spots)
+                .retrieve()
+                .bodyToMono(ScheduledClassResponse.class)
+                .block();
+    }
+
 }

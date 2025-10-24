@@ -1,10 +1,14 @@
 package com.gymbooking.booking.service;
 
+import com.gymbooking.booking.client.MemberClient;
+import com.gymbooking.booking.client.ScheduledClassClient;
+import com.gymbooking.booking.dto.ScheduledClassResponse;
 import com.gymbooking.booking.entities.Booking;
 import com.gymbooking.booking.entities.BookingStatus;
 import com.gymbooking.booking.exception.BusinessRuleException;
 import com.gymbooking.booking.repository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +18,13 @@ public class BookingServiceImpl implements BookingService{
 
     @Autowired
     private BookingRepository bookingRepository;
+
+    @Autowired
+    private ScheduledClassClient scheduledClassClient;
+
+    @Autowired
+    private MemberClient memberClient;
+
 
     @Override
     public List<Booking> findAll() {
@@ -45,8 +56,28 @@ public class BookingServiceImpl implements BookingService{
     }
 
     @Override
-    public Booking save(Booking booking) {
-        return bookingRepository.save(booking);
+    public Booking save(Booking booking) throws BusinessRuleException {
+        String membershipStatus = memberClient.getMembershipStatusById(booking.getMemberId());
+        if (!"ACTIVE".equalsIgnoreCase(membershipStatus)) {
+            throw new BusinessRuleException("1001", "Member's membership is not active", HttpStatus.BAD_REQUEST);
+        }
+
+        // 1. Obtener la clase agendada
+        ScheduledClassResponse classResponse = scheduledClassClient.getScheduledClassById(booking.getScheduledClassId());
+        int spotsAvailable = classResponse.getSpotsAvailable();
+
+        // 2. Verificar plazas disponibles
+        if (spotsAvailable <= 0) {
+            throw new BusinessRuleException("1004", "No hay plazas disponibles para esta clase, se te pondrá en cola.", org.springframework.http.HttpStatus.BAD_REQUEST);
+        }
+
+        // 3. Guardar la reserva
+        Booking savedBooking = bookingRepository.save(booking);
+
+        // 4. Actualizar plazas disponibles
+        scheduledClassClient.updateSpotsAvailable(booking.getScheduledClassId(), spotsAvailable - 1);
+
+        return savedBooking;
     }
 
     @Override

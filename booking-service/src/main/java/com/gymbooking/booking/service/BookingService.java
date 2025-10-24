@@ -12,7 +12,7 @@ public interface BookingService {
 
     Booking getBookingById(Long id) throws BusinessRuleException;
 
-    Booking save(Booking booking);
+    Booking save(Booking booking) throws  BusinessRuleException;
 
     void deleteBookingById(Long id) throws BusinessRuleException;
 

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/timetable")
@@ -31,6 +32,14 @@ public class ScheduledClassController {
         response.setClassName(classCatalogClient.getClassNameById(scheduledClass.getClassId()));
         response.setInstructorName(""); // Preparado para el futuro
         return response;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ScheduledClassResponse> getScheduledClassById(@PathVariable Long id) throws BusinessRuleException {
+        ScheduledClass scheduledClass = scheduledClassService.findById(id)
+                .orElseThrow(() -> new BusinessRuleException("404", "Clase agendada no encontrada", org.springframework.http.HttpStatus.NOT_FOUND));
+        ScheduledClassResponse response = toResponse(scheduledClass);
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping
@@ -73,6 +82,15 @@ public class ScheduledClassController {
     public ResponseEntity<ScheduledClass> createScheduledClass(@RequestBody ScheduledClass scheduledClass) {
         ScheduledClass savedClass = scheduledClassService.save(scheduledClass);
         return ResponseEntity.status(201).body(savedClass);
+    }
+
+    @PatchMapping("/{id}/spots")
+    public ResponseEntity<ScheduledClass> updateSpotsAvailable(
+            @PathVariable Long id,
+            @RequestParam("spots") int spots) throws BusinessRuleException {
+        ScheduledClass updatedClass = scheduledClassService.updateSpotsAvailable(id, spots)
+                .orElseThrow(() -> new BusinessRuleException("404", "Clase agendada no encontrada", org.springframework.http.HttpStatus.NOT_FOUND));
+        return ResponseEntity.ok(updatedClass);
     }
 
 

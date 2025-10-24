@@ -46,11 +46,6 @@ public class BookingController {
 
     @PostMapping
     public ResponseEntity<Booking> createBooking(@RequestBody Booking booking) throws BusinessRuleException {
-        // Validar el estado de la membresía del miembro
-        String membershipStatus = memberClient.getMembershipStatusById(booking.getMemberId());
-        if (!"ACTIVE".equalsIgnoreCase(membershipStatus)) {
-            throw new BusinessRuleException("1001", "Member's membership is not active", HttpStatus.BAD_REQUEST);
-        }
         Booking savedBooking = bookingService.save(booking);
         return ResponseEntity.status(201).body(savedBooking);
     }

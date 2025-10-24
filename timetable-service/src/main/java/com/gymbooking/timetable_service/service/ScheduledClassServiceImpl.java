@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ScheduledClassServiceImpl implements ScheduledClassService {
@@ -60,6 +61,24 @@ public class ScheduledClassServiceImpl implements ScheduledClassService {
             throw new BusinessRuleException("1003", "No se encontraron clases en el rango de fechas especificado", HttpStatus.NOT_FOUND);
         }
         return result;
+    }
+
+    @Override
+    public Optional<ScheduledClass> findById(Long id) throws BusinessRuleException {
+        return scheduledClassRepository.findById(id);
+
+    }
+
+    @Override
+    public Optional<ScheduledClass> updateSpotsAvailable(Long id, Integer spotsAvailable) throws BusinessRuleException {
+        Optional<ScheduledClass> optionalScheduledClass = scheduledClassRepository.findById(id);
+        if (optionalScheduledClass.isEmpty()) {
+            throw new BusinessRuleException("1003", "Scheduled class not found for id: " + id, HttpStatus.NOT_FOUND);
+        }
+        ScheduledClass scheduledClass = optionalScheduledClass.get();
+        scheduledClass.setSpotsAvailable(spotsAvailable);
+        scheduledClassRepository.save(scheduledClass);
+        return Optional.of(scheduledClass);
     }
 
 }
