@@ -47,9 +47,18 @@ Para ejecutar este proyecto, necesitarás tener instalado Java 17 y Maven.
     mvn spring-boot:run
     ```
 
-4.  **Acceder a la API:**
-    * **Catálogo de Clases:** `http://localhost:8082/swagger-ui/index.html`
-    * **Servicio de Miembros:** `http://localhost:8081/swagger-ui/index.html`
+    El orden para el correcto funcionamiento sería el siguiente: 
+    1º Levantamos el discovery-service.
+    2º API-gateway.
+    3º Es indiferente el orden a partir de aquí.
+
+    PD. Hay que tenr en cuenta que para probar cualquier endpoint habría que crear primero los datos mediante POST, ya que no hay una base de datos creada ni se crean de momento datos de prueba.
+
+5.  **Acceder a la API:**
+    Para acceder a cualquier microservicio lo hace a través del API-gateway: http://localhost:8080/api/v1/
+    En el OpenAPI de cada microservicio se puede comprobar la url exacta para probar endpoints en postman.
 
 ## Estado del Proyecto (08/10/2025)
-Actualmente, los servicios de negocio `class-catalog-service`, `member-service` y timetable-service` están funcional con operaciones CRUD básicas, manejo de errores centralizado y llamadas entre los microsrvicios `timetable-service` y `class-catalog-service'. También los microsericios de infraestructura `api-gateway` y `discovery-service`, están en funcionamiento. Siguiente tarea: `booking-service`, el cual es el verdadero eje de la aplicación.
+Todos los microservicios en funcionamiento
+Última tarea realizada: Tras crear el microservicio `booking-service`, hemos creado la conexión con el microservicio `member-service` para comprobar si la suscripción está activa, si lo está, continúa con la reserva y si no, lanza un error indicando el siguiente mensaje: "Member's membership is not active".
+Próxima tarea: Manejar los `spotsAvailable` en `timetable-service` para así tenerlos en cuenta a la hora de crear una reserva a través de `booking-service` y actualizar estos si la reserva ha sido creada.
