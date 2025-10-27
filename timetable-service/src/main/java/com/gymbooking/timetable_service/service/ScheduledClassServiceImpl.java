@@ -46,6 +46,9 @@ public class ScheduledClassServiceImpl implements ScheduledClassService {
 
     @Override
     public ScheduledClass save(ScheduledClass scheduledClass) {
+        if (scheduledClass.getId() == null) { // Nueva clase
+            scheduledClass.setSpotsAvailable(scheduledClass.getCapacity());
+        }
         return scheduledClassRepository.save(scheduledClass);
     }
 
