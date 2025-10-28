@@ -2,11 +2,14 @@ package com.gymbooking.booking.service;
 
 import com.gymbooking.booking.client.MemberClient;
 import com.gymbooking.booking.client.ScheduledClassClient;
+import com.gymbooking.booking.dto.BookingResponse;
 import com.gymbooking.booking.dto.ScheduledClassResponse;
 import com.gymbooking.booking.entities.Booking;
 import com.gymbooking.booking.entities.BookingStatus;
+import com.gymbooking.booking.entities.WaitingListEntry;
 import com.gymbooking.booking.exception.BusinessRuleException;
 import com.gymbooking.booking.repository.BookingRepository;
+import com.gymbooking.booking.repository.WaitingListEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -24,6 +27,9 @@ public class BookingServiceImpl implements BookingService{
 
     @Autowired
     private MemberClient memberClient;
+
+    @Autowired
+    private WaitingListEntryRepository waitingListEntryRepository;
 
 
     @Override
@@ -56,28 +62,63 @@ public class BookingServiceImpl implements BookingService{
     }
 
     @Override
-    public Booking save(Booking booking) throws BusinessRuleException {
-        String membershipStatus = memberClient.getMembershipStatusById(booking.getMemberId());
-        if (!"ACTIVE".equalsIgnoreCase(membershipStatus)) {
-            throw new BusinessRuleException("1001", "Member's membership is not active", HttpStatus.BAD_REQUEST);
-        }
+    public BookingResponse save(Booking booking) throws BusinessRuleException {
+        // Paso 1: Validar todas las condiciones previas.
+        validatePreconditions(booking);
 
-        // 1. Obtener la clase agendada
+        // Paso 2: Obtener el estado actual de la clase.
         ScheduledClassResponse classResponse = scheduledClassClient.getScheduledClassById(booking.getScheduledClassId());
         int spotsAvailable = classResponse.getSpotsAvailable();
 
-        // 2. Verificar plazas disponibles
-        if (spotsAvailable <= 0) {
-            throw new BusinessRuleException("1004", "No hay plazas disponibles para esta clase, se te pondrá en cola.", org.springframework.http.HttpStatus.BAD_REQUEST);
+        // Paso 3: Decidir el flujo basado en las plazas disponibles.
+        if (spotsAvailable > 0) {
+            return handleAvailableClass(booking, spotsAvailable);
+        } else {
+            return handleFullClass(booking);
+        }
+    }
+
+    /**
+     * Valida las reglas antes de intentar una reserva o lista de espera.
+     */
+    private void validatePreconditions(Booking booking) throws BusinessRuleException {
+        String membershipStatus = memberClient.getMembershipStatusById(booking.getMemberId());
+        if (!"ACTIVE".equalsIgnoreCase(membershipStatus)) {
+            throw new BusinessRuleException("1001", "Membership is not ACTIVE", HttpStatus.BAD_REQUEST);
         }
 
-        // 3. Guardar la reserva
-        Booking savedBooking = bookingRepository.save(booking);
+        if (bookingRepository.existsByMemberIdAndScheduledClassId(booking.getMemberId(), booking.getScheduledClassId())) {
+            throw new BusinessRuleException("1005", "Member already have a booking.", HttpStatus.CONFLICT);
+        }
 
-        // 4. Actualizar plazas disponibles
+        if (waitingListEntryRepository.existsByMemberIdAndScheduledClassId(booking.getMemberId(), booking.getScheduledClassId())) {
+            throw new BusinessRuleException("1006", "Member is already in the waiting list..", HttpStatus.CONFLICT);
+        }
+    }
+
+    /**
+     * Gestiona la lógica cuando hay plazas disponibles.
+     */
+    private BookingResponse handleAvailableClass(Booking booking, int spotsAvailable) {
+        booking.setBookingStatus(BookingStatus.CONFIRMED);
+        bookingRepository.save(booking);
+
+        // Actualizar plazas
         scheduledClassClient.updateSpotsAvailable(booking.getScheduledClassId(), spotsAvailable - 1);
 
-        return savedBooking;
+        return new BookingResponse("RESERVA_CONFIRMADA", "Tu plaza ha sido confirmada.");
+    }
+
+    /**
+     * Gestiona la lógica cuando la clase está llena.
+     */
+    private BookingResponse handleFullClass(Booking booking) {
+        WaitingListEntry newEntry = new WaitingListEntry();
+        newEntry.setMemberId(booking.getMemberId());
+        newEntry.setScheduledClassId(booking.getScheduledClassId());
+        waitingListEntryRepository.save(newEntry);
+
+        return new BookingResponse("AÑADIDO_A_LISTA_DE_ESPERA", "La clase está llena. Te hemos añadido a la lista de espera.");
     }
 
     @Override

@@ -11,4 +11,6 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
 
     List<Booking> findByMemberId(Long memberId);
     List<Booking> findByScheduledClassId(Long scheduledClassId);
+
+    boolean existsByMemberIdAndScheduledClassId(Long memberId, Long scheduledClassId);
 }

@@ -58,6 +58,12 @@ public class BookingController {
         return ResponseEntity.ok(updated);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBooking(@PathVariable("id") Long id) throws BusinessRuleException {
+        bookingService.deleteBookingById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
 
 }

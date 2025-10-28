@@ -1,5 +1,6 @@
 package com.gymbooking.booking.service;
 
+import com.gymbooking.booking.dto.BookingResponse;
 import com.gymbooking.booking.entities.Booking;
 import com.gymbooking.booking.entities.BookingStatus;
 import com.gymbooking.booking.exception.BusinessRuleException;
@@ -12,7 +13,7 @@ public interface BookingService {
 
     Booking getBookingById(Long id) throws BusinessRuleException;
 
-    Booking save(Booking booking) throws  BusinessRuleException;
+    BookingResponse save(Booking booking) throws  BusinessRuleException;
 
     void deleteBookingById(Long id) throws BusinessRuleException;
 

@@ -21,7 +21,7 @@ public class ScheduledClassServiceImpl implements ScheduledClassService {
     @Override
     public void deleteScheduledClassById(Long id) throws BusinessRuleException {
         if (!scheduledClassRepository.existsById(id)) {
-            throw new  BusinessRuleException("1003", "Member not found for id: " + id, HttpStatus.NOT_FOUND);
+            throw new  BusinessRuleException("1003", "ScheduledClass not found for id: " + id, HttpStatus.NOT_FOUND);
         }
         scheduledClassRepository.deleteById(id);
     }

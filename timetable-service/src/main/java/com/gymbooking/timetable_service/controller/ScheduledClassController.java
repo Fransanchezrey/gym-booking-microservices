@@ -93,5 +93,11 @@ public class ScheduledClassController {
         return ResponseEntity.ok(updatedClass);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteScheduledClass(@PathVariable("id") Long id) throws BusinessRuleException {
+        scheduledClassService.deleteScheduledClassById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }
