@@ -58,7 +58,6 @@ Para ejecutar este proyecto, necesitarás tener instalado Java 17 y Maven.
     Para acceder a cualquier microservicio lo hace a través del API-gateway: http://localhost:8080/api/v1/
     En el OpenAPI de cada microservicio se puede comprobar la url exacta para probar endpoints en postman.
 
-## Estado del Proyecto (08/10/2025)
+## Estado del Proyecto (29/10/2025)
 Todos los microservicios en funcionamiento
-Última tarea realizada: Tras crear el microservicio `booking-service`, hemos creado la conexión con el microservicio `member-service` para comprobar si la suscripción está activa, si lo está, continúa con la reserva y si no, lanza un error indicando el siguiente mensaje: "Member's membership is not active".
-Próxima tarea: Manejar los `spotsAvailable` en `timetable-service` para así tenerlos en cuenta a la hora de crear una reserva a través de `booking-service` y actualizar estos si la reserva ha sido creada.
+Última tarea realizada: Tras haber manejado los huecos disponibles en una clase en la anterior tarea, en esta nos hemos centrado en qué hacer cuando está llena. Hemos creado la Entity Waiting-List, actualizado la lógica de reserva para que te añada si la clase está llena y lo hemos dejado preparado para que te avise si alguien cancela. (Futura implementación con RabbitMQ)
