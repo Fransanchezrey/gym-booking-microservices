@@ -3,14 +3,17 @@ package com.gymbooking.booking.controller;
 
 import com.gymbooking.booking.client.MemberClient;
 import com.gymbooking.booking.client.ScheduledClassClient;
+import com.gymbooking.booking.dto.BookingResponse;
 import com.gymbooking.booking.dto.BookingStatusUpdate;
 import com.gymbooking.booking.entities.Booking;
+import com.gymbooking.booking.entities.WaitingListEntry;
 import com.gymbooking.booking.exception.BusinessRuleException;
 import com.gymbooking.booking.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 
@@ -45,9 +48,20 @@ public class BookingController {
     }
 
     @PostMapping
-    public ResponseEntity<Booking> createBooking(@RequestBody Booking booking) throws BusinessRuleException {
-        Booking savedBooking = bookingService.save(booking);
-        return ResponseEntity.status(201).body(savedBooking);
+    public ResponseEntity<BookingResponse> createBooking(@RequestBody Booking booking) throws BusinessRuleException {
+
+        // 1. Llama al servicio, que ahora devuelve un BookingResponse
+        BookingResponse response = bookingService.save(booking);
+
+        // 2. Decide qué código HTTP devolver basado en el estado de la respuesta
+        if ("RESERVA_CONFIRMADA".equals(response.getStatus())) {
+            // Si la reserva se creó, devolvemos 201 Created.
+            return ResponseEntity.status(HttpStatus.CREATED).body(response);
+        } else { // "AÑADIDO_A_LISTA_DE_ESPERA"
+            // Si se añadió a la lista de espera, la operación fue exitosa, pero no se creó
+            // una nueva reserva. Devolvemos 200 OK.
+            return ResponseEntity.ok(response);
+        }
     }
 
     @PatchMapping("/{id}")
@@ -62,6 +76,12 @@ public class BookingController {
     public ResponseEntity<Void> deleteBooking(@PathVariable("id") Long id) throws BusinessRuleException {
         bookingService.deleteBookingById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/waiting-list/{scheduledClassId}")
+    public ResponseEntity<List<?>> getWaitingListForClass(@PathVariable Long scheduledClassId) {
+        List<WaitingListEntry> waitingList = bookingService.getWaitingListForClass(scheduledClassId);
+        return ResponseEntity.ok(waitingList);
     }
 
 

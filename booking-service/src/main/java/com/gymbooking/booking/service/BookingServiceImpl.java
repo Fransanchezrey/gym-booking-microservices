@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookingServiceImpl implements BookingService{
@@ -123,18 +124,55 @@ public class BookingServiceImpl implements BookingService{
 
     @Override
     public void deleteBookingById(Long id) throws BusinessRuleException {
-        if (!bookingRepository.existsById(id)) {
-            throw new BusinessRuleException("1002", "Booking not found for id: " + id, null);
-        }
+        // --- 1. Obtener la reserva ANTES de borrarla ---
+        Booking bookingToDelete = bookingRepository.findById(id)
+                .orElseThrow(() -> new BusinessRuleException("1002", "Booking not found for id: " + id, HttpStatus.BAD_REQUEST));
+
+        Long scheduledClassId = bookingToDelete.getScheduledClassId();
+        Long memberId = bookingToDelete.getMemberId();
+
         bookingRepository.deleteById(id);
+
+        // --- 3. Actualizar las plazas disponibles (liberar la plaza) ---
+        ScheduledClassResponse classResponse = scheduledClassClient.getScheduledClassById(scheduledClassId);
+        int newSpotsAvailable = classResponse.getSpotsAvailable() + 1;
+        scheduledClassClient.updateSpotsAvailable(scheduledClassId, newSpotsAvailable);
+
+        // --- 4. Comprobar la lista de espera ---
+        Optional<WaitingListEntry> nextInLine = waitingListEntryRepository.findFirstByScheduledClassIdOrderByCreatedAtAsc(scheduledClassId);
+
+        // --- 5. Si hay alguien, actuar ---
+        if (nextInLine.isPresent()) {
+            WaitingListEntry entry = nextInLine.get();
+
+            // Esta línea será reemplazada por la llamada a Rabbit
+            // Por ahora, lo dejamos como una tarea pendiente
+            publishPlazaLiberadaEvent(entry.getMemberId(), scheduledClassId);
+
+            // Una vez que hemos decidido notificarle, lo eliminamos de la lista de espera
+            // para que no se le notifique de nuevo si alguien más cancela.
+            waitingListEntryRepository.delete(entry);
+        }
+    }
+
+    // Este será el método que contendrá la lógica de RabbitMQ
+    private void publishPlazaLiberadaEvent(Long memberId, Long scheduledClassId) {
+        // TODO: Implementar la publicación de un mensaje a RabbitMQ.
+        // El mensaje contendrá el memberId y el scheduledClassId.
+        System.out.println("[PLACEHOLDER] Publishing PlazaLiberadaEvent to RabbitMQ for member: " + memberId);
     }
 
     @Override
     public Booking updateBookingStatus(Long id, BookingStatus status) throws BusinessRuleException {
         Booking booking = bookingRepository.findById(id)
-                .orElseThrow(() -> new BusinessRuleException("404", "Reserva no encontrada", null));
+                .orElseThrow(() -> new BusinessRuleException("404", "Reserva no encontrada", HttpStatus.BAD_REQUEST));
         booking.setBookingStatus(status);
         return bookingRepository.save(booking);
+    }
+
+    @Override
+    public List<WaitingListEntry> getWaitingListForClass(Long scheduledClassId) {
+        return waitingListEntryRepository.findAllByScheduledClassIdOrderByCreatedAtAsc(scheduledClassId);
     }
 
 

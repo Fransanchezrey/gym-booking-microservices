@@ -4,6 +4,7 @@ import com.gymbooking.booking.dto.BookingResponse;
 import com.gymbooking.booking.entities.Booking;
 import com.gymbooking.booking.entities.BookingStatus;
 import com.gymbooking.booking.exception.BusinessRuleException;
+import com.gymbooking.booking.entities.WaitingListEntry;
 
 import java.util.List;
 
@@ -22,4 +23,6 @@ public interface BookingService {
     List<Booking> getBookingsByScheduledClassId(Long scheduledClassId) throws BusinessRuleException;
 
     Booking updateBookingStatus(Long id, BookingStatus status) throws BusinessRuleException;
+
+    List<WaitingListEntry> getWaitingListForClass(Long scheduledClassId);
 }
